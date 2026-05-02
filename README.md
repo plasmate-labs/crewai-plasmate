@@ -25,9 +25,25 @@ Crew(agents=[researcher], tasks=[task]).kickoff()
 
 ## Links
 
-- [Plasmate Documentation](https://plasmate.dev)
-- [W3C Web Agents Community Group](https://www.w3.org/community/web-agents/)
-- [GitHub](https://github.com/nicobailey/plasmate)
+- [Plasmate documentation](https://docs.plasmate.app)
+- [SOM/1.0 specification](https://somspec.org/spec)
+- [Public benchmark](https://webtaskbench.com)
+- [W3C Web Content for AI Community Group](https://www.w3.org/community/web-content-browser-ai/)
+- [Plasmate engine on GitHub](https://github.com/plasmate-labs/plasmate)
+
+## Publishing
+
+This package publishes to PyPI via OIDC trusted publisher on every `v*` tag push (see `.github/workflows/publish.yml`).
+
+To publish a new version:
+
+1. Bump `version` in `pyproject.toml`
+2. `git tag v<version> && git push --tags`
+3. Workflow runs; package appears on PyPI
+
+First-time PyPI setup (one-time, owner-only):
+- Create the project on PyPI by visiting https://pypi.org/manage/account/publishing/
+- Add a trusted publisher with: project=`crewai-plasmate`, owner=`plasmate-labs`, repo=`crewai-plasmate`, workflow=`publish.yml`, environment=`pypi`
 
 ## License
 
